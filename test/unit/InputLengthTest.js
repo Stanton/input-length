@@ -12,6 +12,7 @@ describe('InputLength', () => {
       $html = $('<div></div>');
       $body = $(`<body>
       <textarea id="alpha" class="qa-alpha" maxlength="4"></textarea>
+      <textarea id="bravo" class="qa-bravo" maxlength="4" aria-describedby="foo"></textarea>
       </body>`).appendTo($html);
 
       inputLength = new InputLength($html);
@@ -147,6 +148,15 @@ describe('InputLength', () => {
         });
 
         expect($html.find('.qa-alpha').attr('aria-describedby')).to.not.be.undefined;
+      });
+
+
+      it('should not overwrite an existing aria-describedby attribute', () => {
+        inputLength.init({
+          targetSelector: '.qa-bravo',
+        });
+
+        expect($html.find('.qa-bravo').attr('aria-describedby')).to.contain('foo');
       });
 
 

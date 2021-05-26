@@ -82,6 +82,7 @@ class InputLength {
   setInputLengthWarning(target) {
     let _self = this,
         maxLength = target.getAttribute('maxlength'),
+        ariaDescribedby = target.getAttribute('aria-describedby') ? target.getAttribute('aria-describedby') + ' ' : '',
         messageContainer = document.createElement('span'),
         guid = 'guid-' + Math.floor(Math.random() * (9999 - 1000 + 1)) + 1000;
 
@@ -95,7 +96,7 @@ class InputLength {
     messageContainer.setAttribute('aria-live', 'polite');
     messageContainer.classList.add(_self.baseClass);
 
-    target.setAttribute('aria-describedby', guid);
+    target.setAttribute('aria-describedby', ariaDescribedby + guid);
     target.after(messageContainer);
 
     // Trigger the initial population of the message

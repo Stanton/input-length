@@ -1,7 +1,8 @@
 # Input Length Warning
 
 This component creates a visual representation of the `maxlength` constraint
-and updates it as the user interacts with that field.
+and updates it as the user interacts with that field, with customisation 
+to allow custom classes and styling.
 
 ![text](https://user-images.githubusercontent.com/18653/119674968-8b534880-be34-11eb-9245-b2ac338823e1.gif)
 
@@ -35,7 +36,8 @@ $(function () {
 ```
 
 A new element will be inserted immediately after the target input, and new 
-attributes will be added, for example:
+attributes will be added. The `aria-describedby` guid will be added to
+the existing aria-describedy value if one is already present. 
 
 ```html
 <label for="example">Example field</label>
