@@ -1,4 +1,4 @@
-# Input Length Warning
+# Input Length
 
 This component creates a visual representation of the `maxlength` constraint
 and updates it as the user interacts with that field, with customisation 
