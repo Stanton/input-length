@@ -6,7 +6,7 @@ module.exports = function(grunt) {
       browserify: {
           dev: {
               files: {
-                  'dist/InputLength.js': ['index.js']
+                  'dist/InputLength.js': ['./demo/demo.js']
               },
               options: {
                   browserifyOptions: {

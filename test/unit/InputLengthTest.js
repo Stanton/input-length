@@ -1,7 +1,7 @@
 'use strict';
 
 import $ from 'jquery';
-import InputLength from '../../src/InputLength';
+import InputLength from '../../index';
 
 describe('InputLength', () => {
     let $html,
