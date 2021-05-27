@@ -13,6 +13,7 @@ describe('InputLength', () => {
       $body = $(`<body>
       <textarea id="alpha" class="qa-alpha" maxlength="4"></textarea>
       <textarea id="bravo" class="qa-bravo" maxlength="4" aria-describedby="foo"></textarea>
+      <textarea id="charlie" data-foo="true" maxlength="1"></textarea>
       </body>`).appendTo($html);
 
       inputLength = new InputLength($html);
@@ -37,6 +38,14 @@ describe('InputLength', () => {
         });
 
         expect($html.find('.qa-alpha').next().hasClass('inputLength')).to.be.true;
+      });
+
+      it('should work with any selector, not just classes', () => {
+        inputLength.init({
+          targetSelector: '[data-foo=true]',
+        });
+
+        expect($html.find('#charlie').next().hasClass('inputLength')).to.be.true;
       });
 
     });
