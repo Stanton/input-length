@@ -69,10 +69,9 @@ class InputLength {
       _self.warnThreshold = options.warnThreshold;
     }
 
-    // targets.forEach(_self.setInputLengthWarning);
-    for (const target of targets) {
-      _self.setInputLengthWarning(target)
-    }
+    targets.each(function() {
+      _self.setInputLengthWarning(this)
+    });
   }
 
   /**
@@ -81,6 +80,7 @@ class InputLength {
    */
   setInputLengthWarning(target) {
     let _self = this,
+        $target = $(target),
         maxLength = target.getAttribute('maxlength'),
         ariaDescribedby = target.getAttribute('aria-describedby') ? target.getAttribute('aria-describedby') + ' ' : '',
         messageContainer = document.createElement('span'),
@@ -96,8 +96,8 @@ class InputLength {
     messageContainer.setAttribute('aria-live', 'polite');
     messageContainer.classList.add(_self.baseClass);
 
-    target.setAttribute('aria-describedby', ariaDescribedby + guid);
-    target.after(messageContainer);
+    $target.attr('aria-describedby', ariaDescribedby + guid);
+    $target.after(messageContainer);
 
     // Trigger the initial population of the message
     _self.updateRemaining(target, maxLength, messageContainer);
