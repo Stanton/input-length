@@ -6,15 +6,6 @@ to allow custom classes and styling.
 
 ![text](https://user-images.githubusercontent.com/18653/119674968-8b534880-be34-11eb-9245-b2ac338823e1.gif)
 
-## Accessibility
-
-This component bakes in the following features automatically:
-
-* The message is linked to the input using `aria-describedby` so it is announced 
-when the field receives focus.
-* The message uses a live region to communicate the number of remaining characters
-when the user pauses or finishes typing.
-
 ## Installation
 
 `npm install input-length`
@@ -50,6 +41,15 @@ the existing aria-describedy value if one is already present.
   <span class="inputLength__label">4</span> characters allowed
 </span>
 ```
+
+## Accessibility
+
+This component bakes in the following features automatically:
+
+* The message is linked to the input using `aria-describedby` so it is announced 
+when the field receives focus.
+* The message uses a live region to communicate the number of remaining characters
+when the user pauses or finishes typing.
 
 ## Additional options
 
