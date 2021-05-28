@@ -15,6 +15,10 @@ when the field receives focus.
 * The message uses a live region to communicate the number of remaining characters
 when the user pauses or finishes typing.
 
+## Installation
+
+`npm install input-length`
+
 ## Basic usage
 
 ```html
