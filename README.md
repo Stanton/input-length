@@ -72,8 +72,8 @@ inputLength.init({
   targetSelector: '.js-inputLengthWarning',
   labelClass: 'label',
   okClass: 'label--success',
-  okClass: 'label--warning',
-  okClass: 'label--danger',
+  warnClass: 'label--warning',
+  stopClass: 'label--danger',
   warnThreshold: 90
 });
 ```
