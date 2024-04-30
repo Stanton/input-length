@@ -19,7 +19,8 @@ to allow custom classes and styling.
 
 ```js
 const $ = require('jquery');
-const InputLength = require('./dist/InputLength');
+
+import InputLength from './dist/InputLength';
 
 $(function () {
     const inputLength = new InputLength($('html'));
