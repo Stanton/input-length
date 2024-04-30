@@ -147,4 +147,4 @@ class InputLength {
   }
 }
 
-module.exports = InputLength;
+export default InputLength;
