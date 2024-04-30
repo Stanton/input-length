@@ -1,5 +1,5 @@
 {
-  "version": "1.0.1",
+  "version": "2.0.0",
   "name": "input-length",
   "description": "Turn maxlength attribute into an accessible live character count",
   "homepage": "https://github.com/stanton/input-length",
