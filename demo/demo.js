@@ -1,5 +1,6 @@
 const $ = require('jquery');
-const InputLength = require('../index');
+
+import InputLength from '../index';
 
 $(function () {
     const inputLength = new InputLength($('html'));
